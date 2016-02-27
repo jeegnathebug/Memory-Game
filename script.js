@@ -167,6 +167,7 @@ function onKeyPress(e) {
     // Get respective cover
     target = document.getElementById("cover" + (key - 96));
 
+
     // "developer options"
     if(target == null) {
         g.dev += (String.fromCharCode(key));
@@ -183,7 +184,7 @@ function onKeyPress(e) {
                 }
                 g.dev = "";
             }
-    } else {
+    } else if (target.style.visibility != "hidden") {
         flip(target);
     }
 }
@@ -191,7 +192,6 @@ function onKeyPress(e) {
 function removeCover(target) {
 
     // only act if clicked piece is not already flipped
-
     if (target != null) {
     // remove cover for clicked piece
         if (g.clickCtr <= 1) {
