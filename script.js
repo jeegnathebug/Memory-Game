@@ -101,7 +101,7 @@ function onButtonHover(e) {
         target.style.color = "rgb(255,155,0)";
         target.style.backgroundColor = "rgb(0,125,255)";
 
-        target.style.minWidth = "100%";
+        target.style.minWidth = "95%";
         g.buttonHover = false;
     } else {
         target.style.color = "rgb(0,125,255)";
@@ -189,7 +189,8 @@ function onKeyPress(e) {
 function removeCover(target) {
 
     // only act if clicked piece is not already flipped
-    if (target.style.visibility != "hidden") {
+
+    if (target != null) {
     // remove cover for clicked piece
         if (g.clickCtr <= 1) {
             target.style.visibility = "hidden";
@@ -237,12 +238,16 @@ function setImages() {
 }
 
 function shuffle(array) {
-    var j, x, i;
-    for (i = array.length; i; i -= 1) {
-        j = Math.floor(Math.random() * i + 1);
-        x = array[i - 1];
-        array[i - 1] = array[j];
-        array[j] = x;
+    var random, placeholder, i;
+    for (i = 0; i < array.length; i++) {
+
+        // Get random number
+        random = Math.floor(Math.random() * i);
+
+        // Switch places
+        placeholder = array[i];
+        array[i] = array[random];
+        array[random] = placeholder;
     }
     return array;
 }
