@@ -39,11 +39,9 @@ function init() {
     addEvent(header, "mouseout", onHeaderHover);
 
     g.buttonHover = true;
-    var buttons = getElementsByClass("button");
-    addEvent(buttons[0], "mouseover", onButtonHover);
-    addEvent(buttons[1], "mouseover", onButtonHover);
-    addEvent(buttons[0], "mouseout", onButtonHover);
-    addEvent(buttons[1], "mouseout", onButtonHover);
+    var button = document.getElementById("buttons");
+    addEvent(button, "mouseover", onButtonHover);
+    addEvent(button, "mouseout", onButtonHover);
 }
 
 function backImage() {
@@ -97,18 +95,21 @@ function onButtonHover(e) {
     // Get element that triggered event
     var target = evt.target || evt.srcElement;
 
-    if(g.buttonHover) {
-        target.style.color = "rgb(255,155,0)";
-        target.style.backgroundColor = "rgb(0,125,255)";
+    // Only act if hovering over buttons and not div itself
+    if (target.id != "buttons") {
+        if(g.buttonHover) {
+            target.style.color = "rgb(255,155,0)";
+            target.style.backgroundColor = "rgb(0,125,255)";
 
-        target.style.minWidth = "95%";
-        g.buttonHover = false;
-    } else {
-        target.style.color = "rgb(0,125,255)";
-        target.style.backgroundColor = "rgb(125,215,255)";
+            target.style.minWidth = "95%";
+            g.buttonHover = false;
+        } else {
+            target.style.color = "rgb(0,125,255)";
+            target.style.backgroundColor = "rgb(125,215,255)";
 
-        target.style.minWidth = "75%";
-        g.buttonHover = true;
+            target.style.minWidth = "75%";
+            g.buttonHover = true;
+        }
     }
 }
 
@@ -163,9 +164,10 @@ function onKeyPress(e) {
 
     var target = null;
 
+    // Get respective cover
     target = document.getElementById("cover" + (key - 96));
 
-    // "developper options"
+    // "developer options"
     if(target == null) {
         g.dev += (String.fromCharCode(key));
             if (g.dev.includes("420423")) {
