@@ -1,0 +1,236 @@
+* {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* Colors */
+header, nav, footer, .cover {
+	background-color: rgb(0,125,255);
+}
+
+/* header */
+.header1 {
+	color: rgb(255,255,255);
+}
+
+.header2 {
+	color: rgb(255,155,0);
+}
+
+body {
+    background-color: rgb(255,235,220);
+}
+
+/* cover pieces */
+.cover {
+	color: rgb(0,125,255);
+	background-color: rgb(125,215,255);
+}
+
+.cover:hover {
+	color: rgb(255,155,0);
+	background-color: rgb(0,125,255);
+
+	border-radius: 15px;
+}
+
+.piece {
+	background-color: rgb(125,215,255);
+}
+
+.button {
+	color: rgb(0,125,255);
+	background-color: rgb(125,215,255);
+}
+
+.button:hover {
+	color: rgb(255,155,0);
+	background-color: rgb(0,125,255);
+
+	border-radius: 30px;
+}
+
+/* highlight color */
+::selection {
+    background-color: rgb(255,155,0);
+    color: rgb(255,255,255);
+}
+
+::-moz-selection {
+    background-color: rgb(255,155,0);
+    color: rgb(255,255,255);
+}
+
+::-o-selection {
+    background-color: rgb(255,155,0);
+    color: rgb(255,255,255);
+}
+
+::-webkit-selection {
+    background-color: rgb(255,155,0);
+    color: rgb(255,255,255);
+}
+
+/* Fonts */
+header a, .instructions, .cover, .button {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+/* Effects */
+header span, .cover, .button {
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/* STYLE */
+
+/* Header */
+header {
+	padding-top: 10px;
+	min-height: 20vh;
+	max-height: 20vh;
+
+	font-size: 60px;
+	text-align: center;
+
+	box-shadow: 0 5px 15px 2px rgba(150,150,150,0.5);
+}
+
+header a {
+	padding: 10px;
+
+	text-decoration: none;
+	line-height: 10vh;
+}
+
+/* Nav */
+nav {
+	padding-top: 10px;
+	min-height: 9vh;
+	max-height: 9vh;
+
+	font-size: 35px;
+}
+
+/* Body */
+.instructions {
+	padding: 10px;
+	min-height: 50vh;
+	max-height: 50vh;
+	min-width: 250px;
+	max-width: 25vw;
+
+	position: relative;
+	float: left;
+
+	font-size: 20px;
+	color: rgb(0,125,255);
+}
+
+.instructions p {
+	padding: 0 10px;
+}
+
+.hax {
+	color: red;
+}
+
+.buttons {
+	padding: 10px;
+	min-height: 50vh;
+	max-height: 50vh;
+	min-width: 250px;
+	max-width: 25vw;
+
+	position: relative;
+	float: right;
+}
+
+.button {
+	padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+	min-height: 50px;
+	max-height: 50px;
+	min-width: 200px;
+	width: 90%;
+	max-width: 100%;
+
+	border-radius: 10px;
+
+	font-size: 20px;
+}
+
+/* Game board */
+.game {
+	min-height: 490px;
+	max-height: 50vh;
+	min-width: 575px;
+	max-width: 75vw;
+
+	position: relative;
+
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	margin-left: 25vw; 
+	margin-right: 25vw;
+}
+
+/* Layers */
+.bottom, .bottom img, .middle, .top {	
+	min-height: 50vh;
+	max-height: 50vh;
+	min-width: 100%;
+	max-width: 100%;
+
+	position: absolute;
+}
+
+/* Pieces */
+.piece, .cover {
+	display: block;
+	float: left;
+
+	min-height: 12.5vh;
+	max-height: 12.5vh;
+	min-width: 25%;
+	max-width: 25%;
+}
+
+.cover {
+	font-size: 90px; 
+
+	text-align: center;
+	line-height: 12.5vh;
+}
+
+.cover p {
+	/* Make text unclickable */
+	pointer-events: none;
+}
+
+/* Footer */
+footer {
+	padding: 10px;
+	min-height: 9.5vh;
+	max-height: 9.5vh;
+
+	position: relative;
+	bottom: 0;
+
+	font-size: 17px;
+	text-decoration: none;
+}
+
+footer p, footer a {
+	display: inline;
+
+	color: white;
+	text-decoration: none;
+}
