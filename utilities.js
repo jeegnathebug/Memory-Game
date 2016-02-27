@@ -19,6 +19,15 @@ function getElementsByClass(cn) {
     return classArray;
 }
 
+function loadImages() {
+    var images = g.images.concat(g.wallpapers);
+    var image = new Image();
+
+    for(i = 0; i < g.images.length; i++) {
+        image.src = g.images[i];
+    }
+}
+
 function removeEvent(obj, type, fn) {
 	if (obj.removeEventListener) {
 		obj.removeEventListener(type, fn, false);

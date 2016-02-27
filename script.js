@@ -37,6 +37,13 @@ function init() {
     var header = document.getElementById("home");
     addEvent(header, "mouseover", onHeaderHover);
     addEvent(header, "mouseout", onHeaderHover);
+
+    g.buttonHover = true;
+    var buttons = getElementsByClass("button");
+    addEvent(buttons[0], "mouseover", onButtonHover);
+    addEvent(buttons[1], "mouseover", onButtonHover);
+    addEvent(buttons[0], "mouseout", onButtonHover);
+    addEvent(buttons[1], "mouseout", onButtonHover);
 }
 
 function backImage() {
@@ -73,15 +80,6 @@ function flipAll() {
     }
 }
 
-function loadImages() {
-    var images = g.images.concat(g.wallpapers);
-    var image = new Image();
-
-    for(i = 0; i < g.images.length; i++) {
-        image.src = g.images[i];
-    }
-}
-
 function match(image1, image2) {
     if (image1.src == image2.src) {
         // Reset clicked pieces
@@ -93,7 +91,28 @@ function match(image1, image2) {
     }
 }
 
-//FIXME
+function onButtonHover(e) {
+    // Get event
+    var evt = e || windows.event;
+    // Get element that triggered event
+    var target = evt.target || evt.srcElement;
+
+    if(g.buttonHover) {
+        target.style.color = "rgb(255,155,0)";
+        target.style.backgroundColor = "rgb(0,125,255)";
+
+        target.style.minWidth = "100%";
+        g.buttonHover = false;
+    } else {
+        target.style.color = "rgb(0,125,255)";
+        target.style.backgroundColor = "rgb(125,215,255)";
+
+        target.style.minWidth = "75%";
+        g.buttonHover = true;
+    }
+}
+
+
 function onClick(e) {
     // Get event
     var evt = e || windows.event;

@@ -32,8 +32,6 @@ body {
 .cover:hover {
 	color: rgb(255,155,0);
 	background-color: rgb(0,125,255);
-
-	border-radius: 15px;
 }
 
 .piece {
@@ -45,11 +43,13 @@ body {
 	background-color: rgb(125,215,255);
 }
 
-.button:hover {
-	color: rgb(255,155,0);
-	background-color: rgb(0,125,255);
+footer p, footer a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
 
-	border-radius: 30px;
+footer a:hover {
+	color: rgb(255, 155, 0);
 }
 
 /* highlight color */
@@ -74,7 +74,7 @@ body {
 }
 
 /* Fonts */
-header a, .instructions, .cover, .button {
+header, .instructions, .cover, .button, footer {
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -141,9 +141,11 @@ nav {
 
 .buttons {
 	padding: 10px;
+	padding-right: 0;
+
 	min-height: 50vh;
 	max-height: 50vh;
-	min-width: 250px;
+	min-width: 25vw;
 	max-width: 25vw;
 
 	position: relative;
@@ -153,18 +155,17 @@ nav {
 .button {
 	padding: 10px;
     margin-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
 
-	min-height: 50px;
-	max-height: 50px;
-	min-width: 200px;
-	width: 90%;
+	min-height: 75px;
+	max-height: 75px;
+	min-width: 75%;
 	max-width: 100%;
 
-	border-radius: 10px;
+	float:right;
 
-	font-size: 20px;
+	border-radius: 50px 0 0 50px;
+
+	font-size: 25px;
 }
 
 /* Game board */
@@ -180,6 +181,8 @@ nav {
 	margin-bottom: 10vh;
 	margin-left: 25vw; 
 	margin-right: 25vw;
+
+	border-radius: 30px;
 }
 
 /* Layers */
@@ -190,6 +193,8 @@ nav {
 	max-width: 100%;
 
 	position: absolute;
+
+	border-radius: 30px;
 }
 
 /* Pieces */
@@ -215,6 +220,22 @@ nav {
 	pointer-events: none;
 }
 
+#piece1, #cover1 {
+	border-radius: 30px 0 0 0;
+}
+
+#piece4, #cover4 {
+	border-radius: 0 30px 0 0;
+}
+
+#piece13, #cover13 {
+	border-radius: 0 0 0 30px;
+}
+
+#piece16, #cover16 {
+	border-radius: 0 0 30px 0;
+}
+
 /* Footer */
 footer {
 	padding: 10px;
@@ -230,7 +251,5 @@ footer {
 
 footer p, footer a {
 	display: inline;
-
-	color: white;
 	text-decoration: none;
 }
