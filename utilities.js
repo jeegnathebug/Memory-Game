@@ -19,12 +19,11 @@ function getElementsByClass(cn) {
     return classArray;
 }
 
-function loadImages() {
-    var images = g.images.concat(g.wallpapers);
+function loadImages(images) {
     var image = new Image();
 
-    for(i = 0; i < g.images.length; i++) {
-        image.src = g.images[i];
+    for(i = 0; i < images.length; i++) {
+        image.src = images[i];
     }
 }
 

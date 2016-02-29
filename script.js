@@ -16,7 +16,7 @@ function init() {
     g.backCtr = 0;
 
     //load images
-    loadImages();
+    loadImages(g.images.concat(g.wallpapers));
 
     // Start game
     start();
@@ -120,12 +120,10 @@ function onClick(e) {
     // Get element that triggered event
     var target = evt.target || evt.srcElement;
 
-    // if clicked on same piece twice, do nothing
-    if (target.id == "top") {
-        target = null;
+    // only act if clicked on different pieces
+    if (target.id != "top") {
+        flip(target);
     }
-
-    flip(target);
 }
 
 function onHeaderHover() {
