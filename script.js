@@ -2,6 +2,9 @@ var g = {};
 
 window.onload = init;
 
+/**
+ * On load event
+ */
 function init() {
     g.dev = "";
 
@@ -44,19 +47,28 @@ function init() {
     addEvent(button, "mouseout", onButtonHover);
 }
 
+/**
+ * Sets the back image of the game
+ */
 function backImage() {
     var bottom = document.getElementById("bottomImage");
     bottom.src = g.wallpapers[g.backCtr];
 }
 
+/**
+ * When the End Game button is clicked
+ */
 function end() {
     flipAll();
 }
 
+/**
+ * Flips over the cover
+ * @param target The cover to be flipped
+ */
 function flip(target) {
     removeCover(target);
     if (g.clickCtr == 2) {
-        // TODO Get img under g.clickPiece[0] and g.clickPiece[1]
         var image1 = document.getElementById("piece" + g.clickPieces[0].id.substring(5));
         var image2 = document.getElementById("piece" + g.clickPieces[1].id.substring(5));
         if(match(image1, image2)) {
@@ -66,6 +78,9 @@ function flip(target) {
     }    
 }
 
+/**
+ * Flips over all covers
+ */
 function flipAll() {
     // Get covers
     var covers = getElementsByClass("cover");
@@ -78,6 +93,12 @@ function flipAll() {
     }
 }
 
+/**
+ * Checks the source of image1 and image2 and returns true if they are the same, false otherwise.
+ * @param image1 The first image
+ * @param image2 The second image
+ * @returns {Boolean} True if the two images are the same, false otherwise
+ */
 function match(image1, image2) {
     if (image1.src == image2.src) {
         // Reset clicked pieces
@@ -89,6 +110,10 @@ function match(image1, image2) {
     }
 }
 
+/**
+ * Event that occurs when the mouse hovers over a button
+ * @param e The event
+ */
 function onButtonHover(e) {
     // Get event
     var evt = e || windows.event;
@@ -114,6 +139,10 @@ function onButtonHover(e) {
 }
 
 
+/**
+ * Event that occurs when a piece is clicked
+ * @param e The event
+ */
 function onClick(e) {
     // Get event
     var evt = e || windows.event;
@@ -126,6 +155,9 @@ function onClick(e) {
     }
 }
 
+/**
+ * Event that occurs when the mouse hovers over the header text
+ */
 function onHeaderHover() {
     var header1 = getElementsByClass("header1");
     var header2 = getElementsByClass("header2");
@@ -149,6 +181,10 @@ function onHeaderHover() {
     }
 }
 
+/**
+ * Event that occurs when a keyboard key is pressed
+ * @param e The event
+ */
 function onKeyPress(e) {
     // Get event
     var evt = e || windows.event;
@@ -187,6 +223,10 @@ function onKeyPress(e) {
     }
 }
 
+/**
+ * Removes the cover of the given piece
+ * @param target The piece whose cover is to be removed
+ */
 function removeCover(target) {
 
     // only act if clicked piece is not already flipped
@@ -212,6 +252,9 @@ function removeCover(target) {
     }
 }
 
+/**
+ * Sets the images of the pieces in a randomized order
+ */
 function setImages() {
 
     // Get covers
@@ -237,6 +280,11 @@ function setImages() {
     }
 }
 
+/**
+ * Randomizes an array
+ * @param array The array to be randomized
+ * @returns The randomized array
+ */
 function shuffle(array) {
     var random, placeholder, i;
     for (i = 0; i < array.length; i++) {
@@ -252,6 +300,9 @@ function shuffle(array) {
     return array;
 }
 
+/**
+ * The sequence of functions that need to be executed upon the beginning of a game
+ */
 function start() {
     backImage();
     setImages();

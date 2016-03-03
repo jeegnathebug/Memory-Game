@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <!-- assignment1-memory-game.html  completed:16/02/25 -->
 <html>
-	<head>
-		<title>Memory game</title>
-		<!--Style sheets-->
-		<link rel="stylesheet" href="styles/style.css" type="text/css"/>
-		<!--Scripts-->
-		<script src="script.js"></script>
-		<script src="utilities.js"></script>
-	</head>
-	<body id="body">
-		<header id="header">
-			<a href="index.html" id="home" class="home"><span class="header1">Memory </span><span class="header2">| </span><span class="header1">Game</span></a>
-			<nav>
-				<p>Jeegna Patel - 1430196</p>
-			</nav>
-		</header>
+<head>
+<title>Memory game</title>
+<!--Style sheets-->
+<link rel="stylesheet" href="styles/style.css" type="text/css" />
+<link rel="icon" href="resources/pokeball.ico" />
+<!--Scripts-->
+<script src="script.js"></script>
+<script src="utilities.js"></script>
+</head>
+<body id="body">
+	<header id="header">
+		<a href="index.html" id="home" class="home"><span class="header1">Memory
+		</span><span class="header2">| </span><span class="header1">Game</span></a>
+	</header>
+	<nav>
+		<p>Jeegna Patel - 1430196</p>
+	</nav>
 
-		<div>
-			<div class="instructions">
-				<p>Instructions:</p>
-				<p>Click on two tile to be flipped. You can also press the key corresponding to the letter to flip tiles. If the two cards are a matching pair, the tiles are removed. If the cards do not match, they will be flipped over once again. Once all the tiles are removed and the image underneath is revealed, and the player wins. </p>
-				<p class="hax">For hax:</p>
-				<p class="hax">Enter numbers of course code for hacks. Enter 12345 to undo.</p>
+	<div class="body">
+		<div class="instructions">
+			<p>Instructions:</p>
+			<p>Click on two tile to be flipped. You can also press the key
+				corresponding to the letter to flip tiles. If the two cards are a
+				matching pair, the tiles are removed. If the cards do not match,
+				they will be flipped over once again. Once all the tiles are removed
+				and the image underneath is revealed, and the player wins.</p>
+			<p class="hax">For hax:</p>
+			<p class="hax">Enter numbers of course code for hacks. Enter
+				12345 to undo.</p>
+		</div>
+		<div class="buttons" id="buttons">
+			<button class="button" id="buttonStart" type="button">Play
+				Again</button>
+			<button class="button" id="buttonEnd" type="button">End Now</button>
+		</div>
+		<div class="game" id="game">
+			<div id="bottom" class="bottom">
+				<img id="bottomImage" />
 			</div>
-			<div class="buttons" id="buttons">
-				<button class="button" id="buttonStart" type="button">Play Again</button>
-				<button class="button" id="buttonEnd" type="button">End Now</button>
+
+			<div id="middle" class="middle">
+				<img class="piece" id="piece1" /> <img class="piece" id="piece2" />
+				<img class="piece" id="piece3" /> <img class="piece" id="piece4" />
+				<img class="piece" id="piece5" /> <img class="piece" id="piece6" />
+				<img class="piece" id="piece7" /> <img class="piece" id="piece8" />
+				<img class="piece" id="piece9" /> <img class="piece" id="piece10" />
+				<img class="piece" id="piece11" /> <img class="piece" id="piece12" />
+				<img class="piece" id="piece13" /> <img class="piece" id="piece14" />
+				<img class="piece" id="piece15" /> <img class="piece" id="piece16" />
 			</div>
-			<div class="game" id="game">
-				<div id="bottom" class="bottom">
-					<img id="bottomImage"/>
-				</div>
 
-				<div id="middle" class="middle">
-					<img class="piece" id="piece1"/>
-					<img class="piece" id="piece2"/>
-					<img class="piece" id="piece3"/>
-					<img class="piece" id="piece4"/>
-					<img class="piece" id="piece5"/>
-					<img class="piece" id="piece6"/>
-					<img class="piece" id="piece7"/>
-					<img class="piece" id="piece8"/>
-					<img class="piece" id="piece9"/>
-					<img class="piece" id="piece10"/>
-					<img class="piece" id="piece11"/>
-					<img class="piece" id="piece12"/>
-					<img class="piece" id="piece13"/>
-					<img class="piece" id="piece14"/>
-					<img class="piece" id="piece15"/>
-					<img class="piece" id="piece16"/>
-				</div>
-
-				<div id="top" class="top">
-					<section class="cover" id="cover1"><p>A</p></section>
-					<section class="cover" id="cover2"><p>B</p></section>
-					<section class="cover" id="cover3"><p>C</p></section>
-					<section class="cover" id="cover4"><p>D</p></section>
-					<section class="cover" id="cover5"><p>E</p></section>
-					<section class="cover" id="cover6"><p>F</p></section>
-					<section class="cover" id="cover7"><p>G</p></section>
-					<section class="cover" id="cover8"><p>H</p></section>
-					<section class="cover" id="cover9"><p>I</p></section>
-					<section class="cover" id="cover10"><p>J</p></section>
-					<section class="cover" id="cover11"><p>K</p></section>
-					<section class="cover" id="cover12"><p>L</p></section>
-					<section class="cover" id="cover13"><p>M</p></section>
-					<section class="cover" id="cover14"><p>N</p></section>
-					<section class="cover" id="cover15"><p>O</p></section>
-					<section class="cover" id="cover16"><p>P</p></section>
-				</div>
+			<div id="top" class="top">
+				<section class="cover" id="cover1">
+					<p>A</p>
+				</section>
+				<section class="cover" id="cover2">
+					<p>B</p>
+				</section>
+				<section class="cover" id="cover3">
+					<p>C</p>
+				</section>
+				<section class="cover" id="cover4">
+					<p>D</p>
+				</section>
+				<section class="cover" id="cover5">
+					<p>E</p>
+				</section>
+				<section class="cover" id="cover6">
+					<p>F</p>
+				</section>
+				<section class="cover" id="cover7">
+					<p>G</p>
+				</section>
+				<section class="cover" id="cover8">
+					<p>H</p>
+				</section>
+				<section class="cover" id="cover9">
+					<p>I</p>
+				</section>
+				<section class="cover" id="cover10">
+					<p>J</p>
+				</section>
+				<section class="cover" id="cover11">
+					<p>K</p>
+				</section>
+				<section class="cover" id="cover12">
+					<p>L</p>
+				</section>
+				<section class="cover" id="cover13">
+					<p>M</p>
+				</section>
+				<section class="cover" id="cover14">
+					<p>N</p>
+				</section>
+				<section class="cover" id="cover15">
+					<p>O</p>
+				</section>
+				<section class="cover" id="cover16">
+					<p>P</p>
+				</section>
 			</div>
 		</div>
+	</div>
 
-		<footer id="footer">
-			<p>No contents Copyright 2016 &copy; </p><a href="http://www.github.com/jeegnathebug"> jeegnathebug</a>
-		</footer>
-	</body>
+	<footer id="footer">
+		<p>No contents Copyright 2016 &copy;</p>
+		<a href="http://www.github.com/jeegnathebug"> jeegnathebug</a>
+	</footer>
+</body>
 </html>
