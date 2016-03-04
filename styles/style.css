@@ -1,7 +1,7 @@
 * {
 	border: none;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -94,7 +94,7 @@ header span, .cover, .button {
 
 /* Header */
 header {
-	padding-top: 10px;
+	padding-top: 1vh;
 	min-height: 12.5vh;
 	max-height: 12.5vh;
 
@@ -103,21 +103,21 @@ header {
 }
 
 .home {
-	padding: 10px;
+	padding: 1vh 1vw;
 
 	line-height: 10vh;
 }
 
 /* Nav */
 nav {
-	padding-top: 10px;
+	padding-top: 1vh;
 	min-height: 7.5vh;
 	max-height: 7.5vh;
 
 	font-size: 3.5vh;
 	text-align: center;
 	
-	box-shadow: 0 5px 20px -3px rgba(150,150,150,0.5);
+	box-shadow: 0 0.5vh 2vh -0.3vh rgba(150,150,150,0.5);
 }
 
 /* Body */
@@ -130,34 +130,34 @@ nav {
 	padding: 10vh 0;
 }
 .instructions {
-	padding: 10px;
+	padding: 1vh 1vw;
 	padding-left: 0;
 
 	min-height: 50vh;
 	max-height: 50vh;
-	min-width: 22px;
+	min-width: 22vw;
 	max-width: 22vw;
 
 	position: relative;
 	float: left;
 
 	border-radius: 0 5vh 5vh 0;
-	box-shadow: 0 0 20px 2px rgba(150,150,150,0.5);
+	box-shadow: 0 0 2vh 0.2vh rgba(150,150,150,0.5);
 
 	font-size: 2vh;
 	color: rgb(0,125,255);
 }
 
 .instructions p {
-	padding: 0 15px;
+	padding: 0 1.5vh;
 }
 
 .hax {
-	color: red;
+	color: rgb(255,0,0);
 }
 
 .buttons {
-	padding: 10px;
+	padding: 1vh 1vw;
 	padding-right: 0;
 
 	min-height: 50vh;
@@ -170,18 +170,18 @@ nav {
 }
 
 .button {
-	padding: 10px;
+	padding: 1vh 1vw;
     margin-bottom: 1vh;
 
 	min-height: 10vh;
-	max-height: 75px;
+	max-height: 10vh;
 	min-width: 75%;
 	max-width: 95%;
 
 	float: right;
 
 	border-radius: 5vh 0 0 5vh;
-	box-shadow: 0 0 20px 2px rgba(150,150,150,0.5);
+	box-shadow: 0 0 2vh 0.2vh rgba(150,150,150,0.5);
 
 	font-size: 3vh;
 }
@@ -195,10 +195,9 @@ nav {
 
 	position: relative;
 
-	margin-left: 25%; 
-	margin-right: 25%;
+	margin: 0 25%;
 
-	border-radius: 30px;
+	border-radius: 3vh;
 }
 
 /* Layers */
@@ -214,7 +213,7 @@ nav {
 }
 
 .bottom {
-	box-shadow: 0 0 20px 2px rgba(150,150,150,0.5);
+	box-shadow: 0 0 2vh 0.2vh rgba(150,150,150,0.5);
 }
 
 /* Pieces */
@@ -258,19 +257,19 @@ nav {
 
 /* Footer */
 footer {
-	padding: 10px;
+	padding: 1vh 1vw;
 	min-height: 10vh;
 	max-height: 10vh;
 
 	display: inline-block;
 	position: static;
-	width: 100%;
+	width: 100vw;
 	bottom: 0;
 
 	font-size: 2vh;
 	text-decoration: none;
 
-	box-shadow: 0 0 20px 2px rgba(150,150,150,0.5);
+	box-shadow: 0 0 2vh 0.2vh rgba(150,150,150,0.5);
 }
 
 footer p, footer a {
