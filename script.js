@@ -31,7 +31,7 @@ function init() {
     var body = document.getElementById("body");
     addEvent(body, "keypress", onKeyPress);
 
-    var buttons = getElementsByClass("button");
+    var buttons = document.getElementsByClassName("button");
     addEvent(buttons[0], "click", start);
     addEvent(buttons[1], "click", end);
 
@@ -83,9 +83,9 @@ function flip(target) {
  */
 function flipAll() {
     // Get covers
-    var covers = getElementsByClass("cover");
+    var covers = document.getElementsByClassName("cover");
     // Get pieces
-    var pieces = getElementsByClass("piece");
+    var pieces = document.getElementsByClassName("piece");
 
     for (var i = 0; i < 16; i++) {
         pieces[i].style.visibility = "hidden";
@@ -116,7 +116,7 @@ function match(image1, image2) {
  */
 function onButtonHover(e) {
     // Get event
-    var evt = e || windows.event;
+    var evt = e || window.event;
     // Get element that triggered event
     var target = evt.target || evt.srcElement;
 
@@ -145,7 +145,7 @@ function onButtonHover(e) {
  */
 function onClick(e) {
     // Get event
-    var evt = e || windows.event;
+    var evt = e || window.event;
     // Get element that triggered event
     var target = evt.target || evt.srcElement;
 
@@ -159,8 +159,8 @@ function onClick(e) {
  * Event that occurs when the mouse hovers over the header text
  */
 function onHeaderHover() {
-    var header1 = getElementsByClass("header1");
-    var header2 = getElementsByClass("header2");
+    var header1 = document.getElementsByClassName("header1");
+    var header2 = document.getElementsByClassName("header2");
 
     // Mouse over
     if (g.headerHover) {
@@ -186,13 +186,12 @@ function onHeaderHover() {
  * @param e The event
  */
 function onKeyPress(e) {
-    // Get event
-    var evt = e || windows.event;
 
-    var key; 
+    var key;
+
     if(window.event) {
-        key = e.keyCode;
-    } else if(e.which) {                 
+        key = window.event.keyCode;
+    } else if(e.which) {
         key = e.which;
     }
 
@@ -205,19 +204,19 @@ function onKeyPress(e) {
     // "developer options"
     if(target == null) {
         g.dev += (String.fromCharCode(key));
-            if (g.dev.includes("420423")) {
-                var covers = getElementsByClass("cover");
-                for (var i = 0; i < covers.length; i++) {
-                    covers[i].style.backgroundColor = "rgba(125,215,255,0.75)";
-                }
-                g.dev = "";
-            } else if (g.dev.includes("12345")) {
-                var covers = getElementsByClass("cover");
-                for (var i = 0; i < covers.length; i++) {
-                    covers[i].style.backgroundColor = "rgb(125,215,255)";
-                }
-                g.dev = "";
+        if (g.dev.includes("420423")) {
+            var covers = document.getElementsByClassName("cover");
+            for (var i = 0; i < covers.length; i++) {
+                covers[i].style.backgroundColor = "rgba(125,215,255,0.75)";
             }
+            g.dev = "";
+        } else if (g.dev.includes("12345")) {
+            var covers = document.getElementsByClassName("cover");
+            for (var i = 0; i < covers.length; i++) {
+                covers[i].style.backgroundColor = "rgb(125,215,255)";
+            }
+            g.dev = "";
+        }
     } else if (target.style.visibility != "hidden") {
         flip(target);
     }
@@ -258,9 +257,9 @@ function removeCover(target) {
 function setImages() {
 
     // Get covers
-    var covers = getElementsByClass("cover");
+    var covers = document.getElementsByClassName("cover");
     // Get pieces
-    var pieces = getElementsByClass("piece");
+    var pieces = document.getElementsByClassName("piece");
 
     // Cover all pieces
     for (var i = 0; i < covers.length; i++) {

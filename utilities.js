@@ -6,28 +6,10 @@
  */
 function addEvent(obj, type, fn) {
     if (obj.addEventListener) {
-        obj.addEventListener(type, fn, false);
+        obj.addEventListener(type, fn, false); // everything else
     } else if (obj.attachEvent) {
-        obj.attachEvent("on" + type, fn);
+        obj.attachEvent("on" + type, fn); //IE
     }
-}
-
-/**
- * Gets all elements with the given class name
- * @param cn The class name to match the elements to
- * @returns {Array} An array of all elements with the given class name
- */
-function getElementsByClass(cn) {
-    var allElements = document.getElementsByTagName("*");
-    var classArray = [];
-
-    for (var i = 0; i < allElements.length; i++) {
-        if (allElements[i].className == cn) {
-            classArray.push(allElements[i]);
-        }
-    }
-
-    return classArray;
 }
 
 /**
