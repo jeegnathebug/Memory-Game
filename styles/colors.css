@@ -1,0 +1,105 @@
+/* Colors */
+header, nav, footer, .cover {
+	background-color: rgb(0,125,255);
+}
+
+.home, nav, footer p, footer a {
+	color: rgb(255,255,255);
+}
+
+/* Header */
+.header1, #header:hover .header2 {
+	color: rgb(255,255,255);
+}
+
+.header2, #header:hover .header1 {
+	color: rgb(255,155,0);
+}
+
+body {
+	background-color: rgb(255,245,235);
+}
+
+/* Cover pieces */
+.cover {
+	color: rgb(0,125,255);
+	background-color: rgb(125,215,255);
+}
+
+.cover:hover {
+	color: rgb(255,155,0);
+	background-color: rgb(0,125,255);
+}
+
+.piece {
+	background-color: rgb(125,215,255);
+}
+
+.instruction {
+	background-color: rgb(125,215,255);
+	color: rgb(0,125,255);
+}
+
+.button {
+	color: rgb(0,125,255);
+	background-color: rgb(125,215,255);
+}
+
+footer a:hover {
+	color: rgb(255, 155, 0);
+}
+
+/* Highlight color */
+::selection {
+	background-color: rgb(255,155,0);
+	color: rgb(255,255,255);
+}
+
+::-moz-selection {
+	background-color: rgb(255,155,0);
+	color: rgb(255,255,255);
+}
+
+::-o-selection {
+	background-color: rgb(255,155,0);
+	color: rgb(255,255,255);
+}
+
+::-webkit-selection {
+	background-color: rgb(255,155,0);
+	color: rgb(255,255,255);
+}
+
+/* Fonts */
+header, nav, .instruction, .cover, .button, footer {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+header, footer, header a, footer a {
+	text-align: center;
+	text-decoration: none;
+}
+
+.home {
+	font-size: 50px;
+}
+
+.content p, .content button {
+	font-size: 16px;
+}
+
+.cover {
+	text-align: center;
+}
+
+.cover p {
+	font-size: 50px;
+}
+
+/* Effects */
+header span, .cover, .button, .instructions {
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,39 @@
+@media only screen and (max-width: 1000px) {
+	.content {
+		height: auto;
+	}
+
+	.instructions {
+		display: none;
+	}
+
+	.game {
+		width: 100%;
+	}
+
+	.board {
+		margin-left: 10%;
+		margin-right: 10%;
+
+		max-width: 80%;
+		width: 80%;
+	}
+
+	.buttons {
+		width: 100%;
+	}
+
+	.button {
+		margin-left: 10%;
+		margin-right: 10%;
+		width: 80%;
+		min-width: 400px;
+
+		border-radius: 50px;
+		float: none;
+	}
+
+	.button:hover {
+		width: 80%;
+	}
+}
